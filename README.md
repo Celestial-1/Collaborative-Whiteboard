@@ -49,7 +49,7 @@ To run this project locally, follow these steps:
     ```
 2. Navigate to the project directory:
     ```bash
-    cd real-time-collaborative-whiteboard
+    cd Collaborative-Whiteboard
     ```
 3. Set up the database (MySQL) and configure JDBC in `application.properties`.
 4. Run the backend server (Java Spring Boot).
