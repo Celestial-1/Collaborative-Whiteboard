@@ -1,0 +1,3 @@
+# Collaborative-Whiteboard
+
+The Real-Time Collaborative Whiteboard is a web-based platform that enables teams to brainstorm and collaborate visually in real time. Users can draw, write, and share ideas on a shared canvas, with seamless synchronization across all participants. Built with React, Java Spring Boot, and WebSockets, it enhances productivity and team synergy regardless of geographical location.
