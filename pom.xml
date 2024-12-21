@@ -49,7 +49,7 @@
         </dependency>
     </dependencies>
     <build>
-        <!-- Set finalName to ROOT for root context deployment -->
-        <finalName>ROOT</finalName>
+        
+        <finalName>WhiteBoard</finalName>
     </build>
 </project>

@@ -1,11 +1,12 @@
-package com.user.dao;
+package com.example.dao;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import com.user.model.User;
-import com.user.model.Board;
-import com.user.model.Drawing;
+
+import com.example.model.Board;
+import com.example.model.Drawing;
+import com.example.model.User;
 
 public class CollaborativeWhiteboardDAO {
     
