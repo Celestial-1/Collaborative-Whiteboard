@@ -37,7 +37,7 @@ public class WhiteboardController extends HttpServlet {
                 requestDispatcher.forward(request, response);
                 break;
 
-            case "/board":
+            case "/":
                 // Handle the root context
                 requestDispatcher = request.getRequestDispatcher("index.jsp");
                 requestDispatcher.forward(request, response);

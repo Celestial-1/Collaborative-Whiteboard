@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - Collaborative Whiteboard</title>
+    <title>Sign In</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="mt-3 text-center">
-                    <a href="/Whiteboard/board">Back to Whiteboard</a>
+                    <a href="/Whiteboard">Back to Whiteboard</a>
                 </div>
             </div>
         </div>
@@ -118,7 +118,7 @@
             // Simulate successful Signin
             localStorage.setItem('loggedInUser', JSON.stringify({ name: username, color: getRandomColor() }));
             alert(`Signin successful! Welcome, ${username}`);
-            window.location.href = '/Whiteboard/board';
+            window.location.href = '/Whiteboard';
         });
 
         function getRandomColor() {
