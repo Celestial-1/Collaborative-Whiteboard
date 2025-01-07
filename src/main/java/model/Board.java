@@ -1,4 +1,5 @@
-package com.example.model;
+package model;
+
 
 import java.sql.Timestamp;
 
@@ -49,3 +50,4 @@ public class Board {
         this.creatorId = creatorId;
     }
 }
+

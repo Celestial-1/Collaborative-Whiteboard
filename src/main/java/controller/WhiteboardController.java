@@ -1,4 +1,4 @@
-package com.example.controller;
+package controller;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -9,11 +9,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/") // Mapping for the servlet
-public class Home extends HttpServlet {
+public class WhiteboardController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     // Constructor
-    public Home() {
+    public WhiteboardController() {
         super();
     }
 
@@ -37,9 +37,9 @@ public class Home extends HttpServlet {
                 requestDispatcher.forward(request, response);
                 break;
 
-            case "/":
+            case "/board":
                 // Handle the root context
-                requestDispatcher = request.getRequestDispatcher("/index.jsp");
+                requestDispatcher = request.getRequestDispatcher("index.jsp");
                 requestDispatcher.forward(request, response);
                 break;
 

@@ -1,14 +1,14 @@
-package com.example.dao;
+package dao;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.model.Board;
-import com.example.model.Drawing;
-import com.example.model.User;
+import model.Board;
+import model.Drawing;
+import model.User;
 
-public class CollaborativeWhiteboardDAO {
+public class DAO {
     
     // JDBC configuration
     private String jdbcURL = "jdbc:mysql://localhost:3306/whiteboarddb";
@@ -24,10 +24,10 @@ public class CollaborativeWhiteboardDAO {
     private static final String SELECT_DRAWINGS_BY_BOARD_ID = "SELECT * FROM Drawing WHERE board_id = ? ORDER BY created_at;";
 
     // Constructor
-    public CollaborativeWhiteboardDAO() {}
+    public DAO() {}
 
     // Method to establish a connection
-    private Connection getConnection() {
+    public Connection getConnection() {
         Connection connection = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -40,18 +40,19 @@ public class CollaborativeWhiteboardDAO {
 
     // ---------- User Operations ----------
 
-    public boolean createUser(String username, String email, String password) {
+    public boolean createUser(User user) {
         try (Connection connection = getConnection();
              PreparedStatement stmt = connection.prepareStatement(INSERT_USER_SQL)) {
-            stmt.setString(1, username);
-            stmt.setString(2, email);
-            stmt.setString(3, password);
+            stmt.setString(1, user.getUsername());
+            stmt.setString(2, user.getEmail());
+            stmt.setString(3, user.getPassword());
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
     }
+
 
     public User getUserById(int userId) {
         User user = null;
@@ -60,7 +61,7 @@ public class CollaborativeWhiteboardDAO {
             stmt.setInt(1, userId);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                user = new User(rs.getInt("user_id"), rs.getString("username"), rs.getString("email"), rs.getString("password"));
+                user = new User(rs.getString("username"), rs.getString("email"), rs.getString("password"));
             }
         } catch (SQLException e) {
             e.printStackTrace();

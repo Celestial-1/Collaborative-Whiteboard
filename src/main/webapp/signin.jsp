@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="mt-3 text-center">
-                    <a href="/">Back to Whiteboard</a>
+                    <a href="/Whiteboard/board">Back to Whiteboard</a>
                 </div>
             </div>
         </div>
@@ -118,7 +118,7 @@
             // Simulate successful Signin
             localStorage.setItem('loggedInUser', JSON.stringify({ name: username, color: getRandomColor() }));
             alert(`Signin successful! Welcome, ${username}`);
-            window.location.href = 'index.jsp';
+            window.location.href = '/Whiteboard/board';
         });
 
         function getRandomColor() {

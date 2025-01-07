@@ -129,7 +129,7 @@
         <nav class="navbar navbar-expand-lg shadow-sm py-3">
             <div class="container-fluid">
                 <a class="navbar-brand fw-bold text-primary" href="">
-                    <img src="/images/icon.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top"> 
+                    <img src="images/icon.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top"> 
                     Whiteboard Pro
                 </a>
                 <div class="d-flex align-items-center">
