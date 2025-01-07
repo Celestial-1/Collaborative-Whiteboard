@@ -12,8 +12,8 @@ public class DAO {
     
     // JDBC configuration
     private String jdbcURL = "jdbc:mysql://localhost:3306/whiteboarddb";
-    private String jdbcUserName = "root";
-    private String jdbcPassword = "hexabase";
+    private String jdbcUserName = "testuser";
+    private String jdbcPassword = "12345678";
 
     // SQL queries
     private static final String INSERT_USER_SQL = "INSERT INTO User (username, email, password) VALUES (?, ?, ?);";

@@ -1,8 +1,10 @@
 import org.junit.jupiter.api.Test;
+
+import dao.DAO;
+
 import static org.junit.jupiter.api.Assertions.assertNotNull;  // Correct import for JUnit 5
 import static org.junit.jupiter.api.Assertions.assertTrue;   // Correct import for JUnit 5
 
-import dao.DAO;
 
 class UserDAOTest {
     
